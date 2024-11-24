@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+
+header .logo-container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoimg {
+    width: 15vw;
+    max-width: 300px;
+    min-width: 150px;
+}
+
+#main-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    margin-top: -30vh;
+    margin-bottom: 14vh;
+}
+
+.main-info-txt {
+    font-size: 4vw;
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+.extra-info {
+    font-size: 1vw;
+    margin-top: 10px;
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+    opacity: 0;
+}
+
+.yellow {
+    color: #FECC09;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.services-container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30vh;
+}
+
+.container {
+    background-color: #FECC09;
+    color: black;
+    width: 300px;
+    height: 320px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 400px;
+    margin: 0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+}
+
+.container h1 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    padding-top: 25px;
+    background-color: #FECC09;
+    color: black;
+}
+
+.container p {
+    margin: 0;
+    padding: 0;
+    background-color: #FECC09;
+    color: black;
+}
+
+
+.process-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* Ensures responsiveness */
+    gap: 20px;
+    /* Adds space between text and containers */
+    padding: 20px;
+    text-align: left;
+}
+
+/* Left side: stacked containers */
+.process-content {
+    display: flex;
+    flex-direction: column;
+    /* Stacks the containers vertically */
+    gap: 20px;
+    /* Adds space between stacked containers */
+}
+
+.container2 {
+    background-color: #FECC09;
+    color: black;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Offset the second container */
+.container2.offset {
+    margin-left: 30px;
+    /* Moves the container slightly to the right */
+}
+
+/* Right side: h1 and p */
+.process-text {
+    max-width: 400px;
+    /* Limits the width of the text block */
+    margin-left: 40px;
+    /* Adds space between the stacked containers and the text */
+}
+
+.process-text h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.process-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.container2 h1,
+.container2 p {
+    background-color: #FECC09;
+    color: black;
+}
+
+/* Yellow highlight */
+.yellow {
+    color: #FECC09;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .process-container {
+        flex-direction: column;
+        /* Stacks everything vertically */
+        align-items: center;
+        gap: 30px;
+        /* Space between text and containers */
+    }
+
+    .process-text {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .container2.offset {
+        margin-left: 0;
+        /* Removes offset on smaller screens */
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .container2 {
+        width: 100%;
+        /* Full width for smaller devices */
+    }
+
+    .process-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .process-text p {
+        font-size: 0.9rem;
+    }
+}
